@@ -12,7 +12,7 @@ On nextcloud:
 And then:
 
 ```commandline
-git clone sxmo-contacts-from-carddav
+git clone https://github.com/ElishaAz/sxmo-contacts-from-carddav
 cd sxmo-contacts-from-carddav
 ./install.sh
 ```
