@@ -42,12 +42,12 @@ def download(url, user, passwd, auth, verify, filename):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("url", type=str, help="CardDav URL", default=URL)
-    parser.add_argument("-u", "--user", type=str, help="CardDav user", required=True, default=USERNAME)
-    parser.add_argument("-p", "--password", type=str, help="CardDav password. Omit to propt for password",
+    parser.add_argument("-u", "--user", type=str, help="CardDav user", default=USERNAME)
+    parser.add_argument("-p", "--password", type=str, help="CardDav password. Omit to prompt for password",
                         default=PASSWORD)
     parser.add_argument("--no-cert-verify", help="Do not verify https certificate", action="store_true")
     parser.add_argument('--digest', action="store_true", help="Use digest authentication")
-    parser.add_argument("-f", "--tsv-file", default=TSV_FILE)
+    parser.add_argument("-f", "--tsv-file", default=TSV_FILE, help=F'Output TSV file name (defaults to "{TSV_FILE}")')
     args: argparse.Namespace = parser.parse_args()
 
     url = args.url
